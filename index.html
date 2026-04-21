@@ -232,7 +232,7 @@
     margin-top: 2px;
   }
 
-  /* ── PHOTO PLACEHOLDER ── */
+  /* ── PHOTO PLACEHOLDER & HAS-IMG FIX ── */
   .photo {
     background: linear-gradient(135deg, #1e1b14 0%, #2a2518 100%);
     border: 1px solid rgba(200,150,60,0.2);
@@ -257,6 +257,21 @@
     box-shadow: 0 0 20px rgba(200,150,60,0.08);
   }
   .photo .ph-icon { font-size: 1.8rem; opacity: 0.4; }
+
+  /* El FIX para que las fotos se vean perfectas sin zoom */
+  .photo.has-img {
+    background: transparent;
+  }
+  .photo.has-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Encaja la foto entera */
+    padding: 5px; /* Un poco de respiro */
+    display: block;
+  }
+  .photo.has-img .ph-icon {
+    display: none;
+  }
 
   /* ── GRID LAYOUTS ── */
   .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -356,7 +371,7 @@
   .footer-logo { font-family: 'Cinzel', serif; font-size: 1.8rem; font-weight: 900; color: var(--gold); letter-spacing: 6px; margin-bottom: 8px; }
   .footer-info { font-size: 0.9rem; font-style: italic; color: rgba(245,234,216,0.5); line-height: 1.8; letter-spacing: 1px; }
 
-  /* ── MODAL POP-UP Y CHECKOUT ── (Mantenidos de tu versión) */
+  /* ── MODAL POP-UP Y CHECKOUT ── */
   .modal-overlay { position: fixed; inset: 0; z-index: 1000; background: rgba(0, 0, 0, 0.75); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; padding: 20px; }
   .modal-overlay.active { opacity: 1; pointer-events: auto; }
   .modal-content, .checkout-content { background: var(--dark2); border: 1px solid var(--gold-dark); border-radius: 8px; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.9); display: flex; max-height: 90vh; }
@@ -400,7 +415,12 @@
   .remove-item-btn:hover { color: #ff4d4d; transform: scale(1.2); }
   .delivery-options { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 6px; border: 1px solid rgba(200,150,60,0.1); margin-bottom: 20px; }
   .delivery-options label { display: block; font-size: 0.85rem; color: rgba(245,234,216,0.6); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
-  .delivery-select { width: 100%; background: var(--dark); color: var(--cream); border: 1px solid var(--gold-dark); padding: 10px; border-radius: 4px; font-family: 'Crimson Text', serif; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; outline: none; }
+  .delivery-select { width: 100%; background: var(--dark); color: var(--cream); border: 1px solid var(--gold-dark); padding: 10px; border-radius: 4px; font-family: 'Crimson Text', serif; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; outline: none; margin-bottom: 15px;}
+  
+  /* NUEVO ESTILO: Caja para el nombre del cliente */
+  .checkout-name-input { width: 100%; background: rgba(0,0,0,0.3); color: var(--cream); border: 1px solid rgba(200,150,60,0.3); padding: 12px; border-radius: 4px; font-family: 'Crimson Text', serif; font-size: 0.95rem; margin-bottom: 20px; outline: none; transition: border-color 0.3s; }
+  .checkout-name-input:focus { border-color: var(--gold); }
+
   .checkout-footer { border-top: 1px solid rgba(200,150,60,0.2); padding-top: 20px; }
   .checkout-total-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
   .checkout-total-price { font-family: 'Oswald', sans-serif; font-size: 1.8rem; color: var(--gold); }
@@ -511,8 +531,10 @@
       <div class="section-line right"></div>
     </div>
     <div class="grid-3" style="gap:16px;">
-      <div class="dish-row" onclick="openModal('Pan de Ajo Crujiente', '4.50', 'Tostado al horno con mantequilla de ajo, perejil y mozzarella fundida.', 'img/pan-ajo.jpg')" style="cursor: pointer;">
-        <div class="photo sm"><span class="ph-icon">📷</span></div>
+      <div class="dish-row" onclick="openModal('Pan de Ajo Crujiente', '4.50', 'Tostado al horno con mantequilla de ajo, perejil y mozzarella fundida.', 'img/pan-ajo.png')" style="cursor: pointer;">
+        <div class="photo sm has-img">
+          <img src="img/pan-ajo.png" alt="Pan de Ajo">
+        </div>
         <div class="dish-row-info">
           <div class="dish-name">Pan de Ajo Crujiente</div>
           <div class="dish-desc">Con mozzarella fundida</div>
@@ -1044,6 +1066,9 @@
     <div id="cartItemsList" class="cart-items-list"></div>
     
     <div class="delivery-options">
+      <label>Nombre en la reserva:</label>
+      <input type="text" id="customerName" class="checkout-name-input" placeholder="Escribe tu nombre aquí...">
+
       <label>¿Cómo quieres tu pedido?</label>
       <select id="deliverySelect" class="delivery-select" onchange="updateCheckoutTotal()">
         <option value="pickup">Voy a recogerlo al local (Gratis)</option>
@@ -1169,6 +1194,15 @@
   function sendWhatsApp() {
     let telefono = "34961460250"; 
     let tipoEnvio = document.getElementById('deliverySelect').value;
+    
+    // Capturamos el nombre
+    let nombreCliente = document.getElementById('customerName').value.trim();
+
+    // Comprobamos que no esté vacío
+    if (!nombreCliente) {
+      alert("⚠️ ¡Aviso! Por favor, escribe tu nombre para la reserva antes de enviar el pedido.");
+      return; 
+    }
 
     if (tipoEnvio === 'delivery') {
       alert("🛵 ¡Importante! Cuando se abra WhatsApp, recuerda enviarnos tu dirección exacta o compartir tu ubicación para que el repartidor no se pierda.");
@@ -1178,10 +1212,11 @@
     let emojiLocal = "\uD83D\uDCCD"; 
     let emojiMoto = "\uD83D\uDEF5";  
     let emojiNota = "\uD83D\uDCDD";  
+    let emojiPersona = "👤";
 
     let textoEnvio = tipoEnvio === 'pickup' ? `${emojiLocal} *RECOGIDA EN LOCAL*` : `${emojiMoto} *ENVÍO A DOMICILIO*`;
     
-    let mensaje = `${emojiMano} ¡Hola Bella Italia!\nQuiero hacer un pedido:\n\n${textoEnvio}\n\n*Mi Pedido:*\n`;
+    let mensaje = `${emojiMano} ¡Hola Bella Italia!\nQuiero hacer un pedido:\n\n${emojiPersona} *A nombre de:* ${nombreCliente}\n${textoEnvio}\n\n*Mi Pedido:*\n`;
     
     carrito.forEach(item => {
       mensaje += `- ${item.nombre} (${item.precio.toFixed(2)}€)\n`;
