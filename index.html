@@ -1155,7 +1155,21 @@
     document.getElementById('modalTitle').innerText = nombre;
     document.getElementById('modalPrice').innerText = parseFloat(precio).toFixed(2) + '€';
     document.getElementById('modalIngredients').innerText = 'Ingredientes: ' + ingredientes;
-    document.getElementById('modalImg').src = imagenUrl || 'https://via.placeholder.com/400x400/1a1710/c8963c?text=Foto+Plato';
+    
+    // 👇 EL FIX MÁGICO PARA LA FOTO 👇
+    let imgEl = document.getElementById('modalImg');
+    imgEl.style.opacity = '0'; // Ocultamos la foto vieja al instante
+    imgEl.style.transition = 'none'; // Quitamos animaciones para el reseteo
+    
+    // Cargamos la nueva foto
+    imgEl.src = imagenUrl || 'https://via.placeholder.com/400x400/1a1710/c8963c?text=Foto+Plato';
+    
+    // Solo cuando la nueva foto haya cargado del todo, la mostramos suavemente
+    imgEl.onload = function() {
+        imgEl.style.transition = 'opacity 0.3s ease';
+        imgEl.style.opacity = '1';
+    };
+    // ☝️ FIN DEL FIX ☝️
     
     if(document.getElementById('modalNotes')) {
       document.getElementById('modalNotes').value = ''; 
@@ -1229,6 +1243,14 @@
 
   function closeModal() {
     document.getElementById('itemModal').classList.remove('active');
+    
+    // 👇 LIMPIEZA EN LA SOMBRA 👇
+    // Esperamos 300ms a que termine la animación de cerrarse para borrar la foto
+    setTimeout(() => {
+        let imgEl = document.getElementById('modalImg');
+        imgEl.src = ''; 
+        imgEl.style.opacity = '0';
+    }, 300);
   }
 
   document.getElementById('itemModal').addEventListener('click', function(e) {
