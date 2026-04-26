@@ -79,7 +79,6 @@
     box-shadow: 0 4px 30px rgba(0,0,0,0.7);
   }
 
-  /* Logo zone */
   .header-logo {
     flex-shrink: 0;
     width: 180px;
@@ -93,7 +92,6 @@
     position: relative;
   }
   
-  /* Banner zone */
   .header-banner {
     flex: 1;
     min-height: 140px;
@@ -252,7 +250,7 @@
     margin-top: 2px;
   }
 
-  /* ── PHOTO PLACEHOLDER ── */
+  /* ── PHOTO PLACEHOLDER & HAS-IMG ── */
   .photo {
     background: linear-gradient(135deg, #1e1b14 0%, #2a2518 100%);
     border: 1px solid rgba(200,150,60,0.2);
@@ -363,11 +361,9 @@
   .pasta-row-info .dish-name { text-align: left; font-size: 0.9rem; }
   .pasta-row-info .dish-desc { text-align: left; }
 
-  /* ── POSTRES GRID ── */
+  /* ── POSTRES / BEBIDAS ── */
   .postre-card { display: flex; flex-direction: column; gap: 8px; align-items: center; }
   .postre-card .photo { width: 100%; aspect-ratio: 1; border-radius: 50% 50% 4px 4px; }
-
-  /* ── BEBIDAS ── */
   .bebida-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
   .bebida-item .photo { width: 100%; height: 110px; border-radius: 50px; }
 
@@ -383,10 +379,8 @@
     text-transform: uppercase; background: rgba(200,150,60,0.12); padding: 3px 10px; border-radius: 20px;
   }
 
-  /* ── SECTION BG VARIANTS ── */
+  /* ── BG VARIANTS & DIVIDERS ── */
   .bg-dark-panel { background: rgba(0,0,0,0.3); border: 1px solid rgba(200,150,60,0.1); border-radius: 6px; padding: 28px; }
-
-  /* ── DIVIDER ── */
   .ornament-divider { text-align: center; color: var(--gold-dark); font-size: 1.2rem; letter-spacing: 12px; margin: 48px 0; opacity: 0.6; user-select: none; }
 
   /* ── FOOTER ── */
@@ -507,37 +501,37 @@
       <div class="section-line right"></div>
     </div>
     <div class="grid-3" style="gap:16px;">
-      <div class="dish-row" onclick="openModal('Tostada con tomate y aceite', '2.50', 'Pan tostado con tomate natural rallado y aceite de oliva virgen.', 'img/tostada-tomate.png')" style="cursor: pointer;">
+      <div class="dish-row" onclick="openModal('Tostada con tomate y aceite', '2.80', 'Pan tostado con tomate natural rallado y aceite de oliva virgen.', 'img/tostada-tomate.png')" style="cursor: pointer;">
         <div class="photo sm has-img"><img src="img/tostada-tomate.png" alt="Tostada"></div>
         <div class="dish-row-info">
           <div class="dish-name">Tostada con Tomate y Aceite</div>
         </div>
       </div>
-      <div class="dish-row" onclick="openModal('Tostada mantequilla y mermelada', '2.00', 'Pan tostado con mantequilla y mermelada clásica.', 'img/tostada-mantequilla.png')" style="cursor: pointer;">
+      <div class="dish-row" onclick="openModal('Tostada mantequilla y mermelada', '2.20', 'Pan tostado con porciones de mantequilla y mermelada clásica.', 'img/tostada-mantequilla.png')" style="cursor: pointer;">
         <div class="photo sm has-img"><img src="img/tostada-mantequilla.png" alt="Tostada"></div>
         <div class="dish-row-info">
           <div class="dish-name">Tostada con Mantequilla</div>
         </div>
       </div>
-      <div class="dish-row" onclick="openModal('Croissant', '1.80', 'Croissant recién horneado. Opción de pedirlo solo o con nutella.', 'img/croissant.png')" style="cursor: pointer;">
+      <div class="dish-row" onclick="openModal('Croissant', '1.80', 'Croissant recién horneado. Opción de pedirlo solo o mixto.', 'img/croissant.png')" style="cursor: pointer;">
         <div class="photo sm has-img"><img src="img/croissant.png" alt="Croissant"></div>
         <div class="dish-row-info">
-          <div class="dish-name">Croissant</div>
+          <div class="dish-name">Croissant (Solo o Mixto)</div>
         </div>
       </div>
-      <div class="dish-row" onclick="openModal('Bocadillo de Tortilla', '4.50', 'Bocadillo o pincho de tortilla de patatas casera.', 'img/bocadillo-tortilla.png')" style="cursor: pointer;">
+      <div class="dish-row" onclick="openModal('Bocadillo de Tortilla', '4.70', 'Bocadillo o pincho de tortilla de patatas casera.', 'img/bocadillo-tortilla.png')" style="cursor: pointer;">
         <div class="photo sm has-img"><img src="img/bocadillo-tortilla.png" alt="Bocadillo"></div>
         <div class="dish-row-info">
           <div class="dish-name">Bocadillo de Tortilla</div>
         </div>
       </div>
-      <div class="dish-row" onclick="openModal('Bocadillo de Calamares', '5.50', 'Clásico bocadillo de calamares a la andaluza.', 'img/bocadillo-calamares.png')" style="cursor: pointer;">
+      <div class="dish-row" onclick="openModal('Bocadillo de Calamares', '8.50', 'Clásico bocadillo de anillas de calamar a la andaluza.', 'img/bocadillo-calamares.png')" style="cursor: pointer;">
         <div class="photo sm has-img"><img src="img/bocadillo-calamares.png" alt="Bocadillo"></div>
         <div class="dish-row-info">
           <div class="dish-name">Bocadillo de Calamares</div>
         </div>
       </div>
-      <div class="dish-row" onclick="openModal('Bocadillo de Puntilla', '6.00', 'Bocadillo de puntilla frita y crujiente con toque de limón.', 'img/bocadillo-puntilla.png')" style="cursor: pointer;">
+      <div class="dish-row" onclick="openModal('Bocadillo de Puntilla', '8.50', 'Bocadillo de puntilla frita y crujiente.', 'img/bocadillo-puntilla.png')" style="cursor: pointer;">
         <div class="photo sm has-img"><img src="img/bocadillo-puntilla.png" alt="Bocadillo"></div>
         <div class="dish-row-info">
           <div class="dish-name">Bocadillo de Puntilla</div>
@@ -559,21 +553,20 @@
       <div class="section-line right"></div>
     </div>
     <div class="grid-3" style="gap:16px;">
-      <div class="dish-row" onclick="openModal('Pan de Ajo Crujiente', '4.50', 'Tostado al horno con ajo rayado, perejil y con opción de mozzarella fundida.', 'img/pan-ajo.png')" style="cursor: pointer;">
+      <div class="dish-row" onclick="openModal('Pan de Ajo Crujiente', '4.50', 'Tostado al horno con mantequilla de ajo, perejil y mozzarella fundida.', 'img/pan-ajo.png')" style="cursor: pointer;">
         <div class="photo sm has-img"><img src="img/pan-ajo.png" alt="Pan de ajo"></div>
         <div class="dish-row-info">
           <div class="dish-name">Pan de Ajo Crujiente</div>
           <div class="dish-desc">Con mozzarella fundida</div>
         </div>
       </div>
-      <div class="dish-row" onclick="openModal('Nuestras Croquetas', '6.00', 'Croquetas de pescado. Crujientes por fuera, cremosas por dentro.', 'img/croquetas.png')" style="cursor: pointer;">
+      <div class="dish-row" onclick="openModal('Nuestras Croquetas', '7.50', 'Bacalao, setas o pollo asado. Crujientes por fuera, cremosas por dentro.', 'img/croquetas.png')" style="cursor: pointer;">
         <div class="photo sm has-img"><img src="img/croquetas.png" alt="Croquetas"></div>
         <div class="dish-row-info">
           <div class="dish-name">Nuestras Croquetas</div>
           <div class="dish-desc">Bacalao, setas o pollo</div>
         </div>
       </div>
-      
       <div class="dish-row" onclick="openModal('Dúo de Patatas', '5.50', 'Elige tu estilo y tamaño dentro.', 'img/patatas-fritas.png')" style="cursor: pointer;">
         <div class="photo sm has-img"><img src="img/patatas-fritas.png" alt="Patatas"></div>
         <div class="dish-row-info">
@@ -581,15 +574,14 @@
           <div class="dish-desc">Bravas o Fritas</div>
         </div>
       </div>
-
-      <div class="dish-row" onclick="openModal('Puntilla con Limón', '8.00', 'Chipirones fritos crujientes con toque de limón.', 'img/puntilla-con-limón.png')" style="cursor: pointer;">
+      <div class="dish-row" onclick="openModal('Puntilla con Limón', '8.50', 'Chipirones fritos crujientes con toque de limón.', 'img/puntilla-con-limón.png')" style="cursor: pointer;">
         <div class="photo sm has-img"><img src="img/puntilla-con-limón.png" alt="Puntilla"></div>
         <div class="dish-row-info">
           <div class="dish-name">Puntilla con Limón</div>
         </div>
       </div>
-      <div class="dish-row" onclick="openModal('Queso Frito', '6.50', 'Queso rebozado y frito con mermelada.', 'img/queso-frito.png')" style="cursor: pointer;">
-        <div class="photo sm has-img"><img src="img/queso-frito.png" alt="Queso frito"></div>
+      <div class="dish-row" onclick="openModal('Queso Frito', '6.50', 'Dorado por fuera y fundido por dentro.', 'img/queso-frito-2.png')" style="cursor: pointer;">
+        <div class="photo sm has-img"><img src="img/queso-frito-2.png" alt="Queso frito"></div>
         <div class="dish-row-info">
           <div class="dish-name">Queso Frito</div>
         </div>
@@ -610,10 +602,15 @@
       <div class="section-line right"></div>
     </div>
     <div class="grid-5">
-      <div class="dish-card" onclick="openModal('Margarita Clásica', '9.50', 'Tomate italiano, mozzarella, albahaca fresca y aceite de oliva virgen extra.', 'img/margarita.png')" style="cursor: pointer;">
+      <div class="dish-card" onclick="openModal('Margarita Clásica', '8.50', 'Pomodoro italiano, mozzarella fior di latte, albahaca fresca y AOVE.', 'img/margarita.png')" style="cursor: pointer;">
         <div class="photo wide has-img"><img src="img/margarita.png" alt="Pizza"></div>
         <div class="dish-name">Margarita Clásica</div>
         <div class="dish-desc">Pomodoro, mozzarella, albahaca</div>
+      </div>
+      <div class="dish-card" onclick="openModal('Margarita con Búfala', '12.50', 'Pomodoro, mozzarella di búfala y albahaca fresca.', 'img/margarita-bufala.png')" style="cursor: pointer;">
+        <div class="photo wide has-img"><img src="img/margarita-bufala.png" alt="Pizza"></div>
+        <div class="dish-name">Margarita con Búfala</div>
+        <div class="dish-desc">Mozzarella di Búfala</div>
       </div>
       <div class="dish-card" onclick="openModal('Frutti di Mare', '14.00', 'Selección de frutos del mar salteados con ajo, perejil y base de tomate.', 'img/frutti-di-mare.png')" style="cursor: pointer;">
         <div class="photo wide has-img"><img src="img/frutti-di-mare.png" alt="Pizza"></div>
@@ -625,7 +622,7 @@
         <div class="dish-name">Quattro Formaggi</div>
         <div class="dish-desc">4 quesos seleccionados</div>
       </div>
-      <div class="dish-card" onclick="openModal('Pizza Boloñesa', '11.50', 'Carne picada de ternera, cebolla caramelizada, tomate y especias.', 'img/bolognese.png')" style="cursor: pointer;">
+      <div class="dish-card" onclick="openModal('Pizza Boloñesa', '12.00', 'Carne picada de ternera premium, cebolla caramelizada, tomate y especias.', 'img/bolognese.png')" style="cursor: pointer;">
         <div class="photo wide has-img"><img src="img/bolognese.png" alt="Pizza"></div>
         <div class="dish-name">Pizza Boloñesa</div>
         <div class="dish-desc">Ternera y cebolla caramelizada</div>
@@ -640,10 +637,15 @@
         <div class="dish-name">Tonno e Olive</div>
         <div class="dish-desc">Atún y olivas negras</div>
       </div>
-      <div class="dish-card" onclick="openModal('Pizza de Pollo', '11.00', 'Pollo marinado, mozzarella, tomate y especias suaves.', 'img/de-pollo.png')" style="cursor: pointer;">
+      <div class="dish-card" onclick="openModal('Pizza de Pollo', '12.00', 'Pollo marinado, mozzarella, tomate y especias suaves.', 'img/de-pollo.png')" style="cursor: pointer;">
         <div class="photo wide has-img"><img src="img/de-pollo.png" alt="Pizza"></div>
         <div class="dish-name">Pizza de Pollo</div>
         <div class="dish-desc">Pollo marinado</div>
+      </div>
+      <div class="dish-card" onclick="openModal('Pizza de Kebab', '12.00', 'Carne kebab, queso fundido y opción de verduras.', 'img/pizza-de-kebab.png')" style="cursor: pointer;">
+        <div class="photo wide has-img"><img src="img/pizza-de-kebab.png" alt="Pizza"></div>
+        <div class="dish-name">Pizza de Kebab</div>
+        <div class="dish-desc">Pollo o Ternera</div>
       </div>
     </div>
   </section>
@@ -660,60 +662,61 @@
       <div class="section-line right"></div>
     </div>
     <div class="pasta-list">
-      <div class="pasta-row" onclick="openModal('Pasta Frutti di Mare', '15.00', 'Tallarines con marisco fresco, tomate cherry, ajo, guindilla y perejil.', 'img/pasta-frutti-di-mare.png')" style="cursor: pointer;">
+      <div class="pasta-row" onclick="openModal('Pasta Frutti di Mare', '13.00', 'Tallarines con marisco fresco, tomate cherry, ajo, guindilla y perejil.', 'img/pasta-frutti-di-mare.png')" style="cursor: pointer;">
         <div class="photo has-img" style="flex-shrink:0;width:100px;height:70px;"><img src="img/pasta-frutti-di-mare.png" alt="Pasta"></div>
         <div class="pasta-row-info">
           <div class="dish-name">Frutti di Mare</div>
-          <div class="dish-desc"></div>
+          <div class="dish-desc">Tallarines con marisco fresco</div>
         </div>
       </div>
-      <div class="pasta-row" onclick="openModal('Al Pomodoro e Basilico', '9.00', 'Salsa de tomate casera con albahaca fresca.', 'img/al-pomodoro-e-basilico.png')" style="cursor: pointer;">
+      <div class="pasta-row" onclick="openModal('Tomate y albahaca', '6.80', 'Salsa de tomate casera con albahaca fresca.', 'img/al-pomodoro-e-basilico.png')" style="cursor: pointer;">
         <div class="photo has-img" style="flex-shrink:0;width:100px;height:70px;"><img src="img/al-pomodoro-e-basilico.png" alt="Pasta"></div>
         <div class="pasta-row-info">
-          <div class="dish-name">Al Pomodoro e Basilico</div>
-          <div class="dish-desc"></div>
+          <div class="dish-name">Tomate y albahaca</div>
+          <div class="dish-desc">Salsa de tomate con albahaca</div>
         </div>
       </div>
-      <div class="pasta-row" onclick="openModal('Maccheroni Boloñesa al Pomodoro', '12.50', 'Pasta con carne picada especiada en salsa de tomate.', 'img/maccheroni-boloñesa.png')" style="cursor: pointer;">
+      <div class="pasta-row" onclick="openModal('Pasta Boloñesa', '11.00', 'Macarrones con albóndigas de carne especiada en salsa de tomate.', 'img/maccheroni-boloñesa.png')" style="cursor: pointer;">
         <div class="photo has-img" style="flex-shrink:0;width:100px;height:70px;"><img src="img/maccheroni-boloñesa.png" alt="Pasta"></div>
         <div class="pasta-row-info">
-          <div class="dish-name">Maccheroni Boloñesa al Pomodoro</div>
+          <div class="dish-name">Pasta Boloñesa</div>
         </div>
       </div>
-      <div class="pasta-row" onclick="openModal('Primavera de Verduras', '10.50', 'Pasta con verduras crujientes y emulsión de hierbas.', 'img/primavera-de-verduras.png')" style="cursor: pointer;">
+      <div class="pasta-row" onclick="openModal('Primavera de Verduras', '9.50', 'Penne con verduras crujientes y emulsión de hierbas.', 'img/primavera-de-verduras.png')" style="cursor: pointer;">
         <div class="photo has-img" style="flex-shrink:0;width:100px;height:70px;"><img src="img/primavera-de-verduras.png" alt="Pasta"></div>
         <div class="pasta-row-info">
           <div class="dish-name">Primavera de Verduras</div>
         </div>
       </div>
-      <div class="pasta-row" onclick="openModal('Tonno e Olive Pomodorini', '11.50', 'Pasta con atún, olivas negras, tomate cherry y toque picante.', 'img/pomodorini.png')" style="cursor: pointer;">
+      <div class="pasta-row" onclick="openModal('Pomodorini', '10.50', 'Pasta con atún, olivas negras, tomate cherry y toque picante.', 'img/pomodorini.png')" style="cursor: pointer;">
         <div class="photo has-img" style="flex-shrink:0;width:100px;height:70px;"><img src="img/pomodorini.png" alt="Pasta"></div>
         <div class="pasta-row-info">
-          <div class="dish-name">Tonno e Olive Pomodorini</div>
+          <div class="dish-name">Pomodorini (atún y olivas)</div>
         </div>
       </div>
-      <div class="pasta-row" onclick="openModal('Pasta con Crema de Pimiento Rojo', '10.00', 'Pasta con salsa cremosa de pimiento rojo con nata y especias.', 'img/pasta-pimiento.png')" style="cursor: pointer;">
+      <div class="pasta-row" onclick="openModal('Pasta con Crema de Pimiento Rojo', '10.00', 'Salsa cremosa de pimiento rojo con nata y especias.', 'img/pasta-pimiento.png')" style="cursor: pointer;">
         <div class="photo has-img" style="flex-shrink:0;width:100px;height:70px;"><img src="img/pasta-pimiento.png" alt="Pasta"></div>
         <div class="pasta-row-info">
           <div class="dish-name">Pasta con Crema de Pimiento Rojo</div>
         </div>
       </div>
-      <div class="pasta-row" onclick="openModal('Pasta con Crema de Calabacín', '10.00', 'Pasta con una suave crema de calabacín con toque de queso.', 'img/pasta-calabacin.png')" style="cursor: pointer;">
+      <div class="pasta-row" onclick="openModal('Pasta con Crema de Calabacín', '10.00', 'Suave crema de calabacín con toque de queso.', 'img/pasta-calabacin.png')" style="cursor: pointer;">
         <div class="photo has-img" style="flex-shrink:0;width:100px;height:70px;"><img src="img/pasta-calabacin.png" alt="Pasta"></div>
         <div class="pasta-row-info">
           <div class="dish-name">Pasta con Crema de Calabacín</div>
         </div>
       </div>
-      <div class="pasta-row" onclick="openModal('Pasta Cuatro Quesos', '12.00', 'Pasta con salsa cremosa con mezcla de quesos intensos.', 'img/pasta-quattro-formaggi.png')" style="cursor: pointer;">
+      <div class="pasta-row" onclick="openModal('Pasta Cuatro Quesos', '11.50', 'Salsa cremosa con mezcla de quesos intensos.', 'img/pasta-quattro-formaggi.png')" style="cursor: pointer;">
         <div class="photo has-img" style="flex-shrink:0;width:100px;height:70px;"><img src="img/pasta-quattro-formaggi.png" alt="Pasta"></div>
         <div class="pasta-row-info">
           <div class="dish-name">Pasta Cuatro Quesos</div>
         </div>
       </div>
-      <div class="pasta-row" onclick="openModal('Lasaña', '11.00', 'Capas de pasta con carne, bechamel y queso gratinado.', 'img/lasagna.png')" style="cursor: pointer;">
+      <div class="pasta-row" onclick="openModal('Lasaña', '11.50', 'Capas de pasta con carne, bechamel y queso gratinado. (SOLO SÁBADO Y DOMINGO)', 'img/lasagna.png')" style="cursor: pointer;">
         <div class="photo has-img" style="flex-shrink:0;width:100px;height:70px;"><img src="img/lasagna.png" alt="Pasta"></div>
         <div class="pasta-row-info">
           <div class="dish-name">Lasaña de Carne</div>
+          <div class="dish-desc">SOLO SÁBADO Y DOMINGO</div>
         </div>
       </div>
     </div>
@@ -733,31 +736,31 @@
         <div class="section-line right"></div>
       </div>
       <div style="display:flex;flex-direction:column;gap:16px;">
-        <div class="dish-card" onclick="openModal('Mixto del mar', '35.00', 'Selección de pescado y marisco del día al estilo andaluz.', 'img/mixto-del-mar.png')" style="background:rgba(106,189,232,0.04);border:1px solid rgba(106,189,232,0.2);border-radius:6px;padding:14px;display:flex;flex-direction:column;gap:10px;align-items:center;cursor: pointer;">
+        <div class="dish-card" onclick="openModal('Mixto del mar', '19.70', 'Selección de pescado y marisco del día al estilo andaluz.', 'img/mixto-del-mar.png')" style="background:rgba(106,189,232,0.04);border:1px solid rgba(106,189,232,0.2);border-radius:6px;padding:14px;display:flex;flex-direction:column;gap:10px;align-items:center;cursor: pointer;">
           <div class="photo wide has-img" style="width:100%;aspect-ratio:16/7;"><img src="img/mixto-del-mar.png" alt="Mariscada"></div>
-          <span style="font-family:'Oswald',sans-serif;font-size:0.6rem;letter-spacing:4px;color:#6abde8;border:1px solid rgba(106,189,232,0.3);padding:3px 12px;">PARA COMPARTIR</span>
+          <span style="font-family:'Oswald',sans-serif;font-size:0.6rem;letter-spacing:4px;color:#6abde8;border:1px solid rgba(106,189,232,0.3);padding:3px 12px;">Elige el tamaño dentro</span>
           <div class="dish-name">Mixto del mar</div>
         </div>
-        <div class="dish-row" onclick="openModal('Gambones a la Plancha', '14.00', 'Gambones con ajo laminado, guindilla y aceite de oliva virgen.', 'img/gambones-ajillo.png')" style="cursor: pointer;">
+        <div class="dish-row" onclick="openModal('Gambones a la Plancha', '15.00', 'Con ajo laminado, guindilla y aceite de oliva virgen.', 'img/gambones-ajillo.png')" style="cursor: pointer;">
           <div class="photo sm has-img"><img src="img/gambones-ajillo.png" alt="Gambones"></div>
           <div class="dish-row-info">
-            <div class="dish-name">Gambones con Salsa de Ajo</div>
+            <div class="dish-name">Gambones a la Plancha</div>
           </div>
         </div>
-        <div class="dish-row" onclick="openModal('Sepia a la Plancha', '12.00', 'Con salsa mery (aceite, ajo y perejil) y alioli artesano.', 'img/sepia-plancha.png')" style="cursor: pointer;">
+        <div class="dish-row" onclick="openModal('Sepia a la Plancha', '15.00', 'Con mery (aceite, ajo y perejil) y alioli artesano.', 'img/sepia-plancha.png')" style="cursor: pointer;">
           <div class="photo sm has-img"><img src="img/sepia-plancha.png" alt="Sepia"></div>
           <div class="dish-row-info">
             <div class="dish-name">Sepia a la Plancha</div>
           </div>
         </div>
-        
-        <div class="dish-row" onclick="openModal('Fritura de Pescado', '14.00', 'Merluza, sardina, anchoa, chipirones y lenguado crujientes.', 'img/fritura.png')" style="cursor: pointer;">
+        <div class="dish-row" onclick="openModal('Fritura de Pescado', '16.00', 'Merluza, sardina, anchoa, chipirones y lenguado crujientes.', 'img/fritura.png')" style="cursor: pointer;">
           <div class="photo sm has-img"><img src="img/fritura.png" alt="Fritura"></div>
           <div class="dish-row-info">
             <div class="dish-name">Fritura de Pescado</div>
+            <div class="dish-desc">Elige Individual o Familiar</div>
           </div>
         </div>
-        <div class="dish-row" onclick="openModal('Salmón a la Plancha', '13.00', 'Salmón acompañado de guarnición y toque de limón.', 'img/salmon.png')" style="cursor: pointer;">
+        <div class="dish-row" onclick="openModal('Salmón a la Plancha', '13.00', 'Acompañado de guarnición y toque de limón.', 'img/salmon.png')" style="cursor: pointer;">
           <div class="photo sm has-img"><img src="img/salmon.png" alt="Salmon"></div>
           <div class="dish-row-info">
             <div class="dish-name">Salmón a la Plancha</div>
@@ -777,39 +780,40 @@
       </div>
       <div style="display:flex;flex-direction:column;gap:14px;">
         <div class="dish-row" onclick="openModal('Brochetas de Pavo', '8.50', 'Pavo marinado con especias y guarnición.', 'img/brochetas-pavo.png')" style="cursor: pointer;">
-          <div class="photo sm has-img"><img src="img/brochetas-pavo.png" alt="Pinchos morunos"></div>
+          <div class="photo sm has-img"><img src="img/brochetas-pavo.png" alt="Pinchos pavo"></div>
           <div class="dish-row-info">
-            <div class="dish-name">Pinchos Morunos</div>
+            <div class="dish-name">Brochetas de Pavo</div>
           </div>
         </div>
-        <div class="dish-row" onclick="openModal('Entrecot de Ternera', '18.00', 'Filete de ternera hecho a la plancha.', 'img/entrecot.png')" style="cursor: pointer;">
+        <div class="dish-row" onclick="openModal('Entrecot de Ternera', '17.00', 'Corte premium a la brasa.', 'img/entrecot.png')" style="cursor: pointer;">
           <div class="photo sm has-img"><img src="img/entrecot.png" alt="Entrecot"></div>
           <div class="dish-row-info">
             <div class="dish-name">Entrecot de Ternera</div>
           </div>
         </div>
-        <div class="dish-row" onclick="openModal('Chuletillas de Cordero', '16.50', 'Chuletas de cordero la parrilla con sabor intenso.', 'img/chuletillas.png')" style="cursor: pointer;">
+        <div class="dish-row" onclick="openModal('Chuletillas de Cordero', '20.00', 'A la parrilla con sabor intenso.', 'img/chuletillas.png')" style="cursor: pointer;">
           <div class="photo sm has-img"><img src="img/chuletillas.png" alt="Chuletillas"></div>
           <div class="dish-row-info">
             <div class="dish-name">Chuletillas de Cordero</div>
+            <div class="dish-desc">Elige Individual o Familiar</div>
           </div>
         </div>
-        <div class="dish-row" onclick="openModal('Pinchos de Ternera', '10.50', 'Carne picada especiada a la brasa estilo oriental.', 'img/pinchos-ternera.png')" style="cursor: pointer;">
+        <div class="dish-row" onclick="openModal('Pinchos de Ternera', '13.50', 'Carne picada especiada a la brasa estilo oriental.', 'img/pinchos-ternera.png')" style="cursor: pointer;">
           <div class="photo sm has-img"><img src="img/pinchos-ternera.png" alt="Pinchos ternera"></div>
           <div class="dish-row-info">
             <div class="dish-name">Pinchos de Ternera</div>
           </div>
         </div>
-        <div class="dish-row" onclick="openModal('Pechuga de Pollo', '8.50', 'Pollo a la plancha con guarnición.', 'img/pechuga-pollo.png')" style="cursor: pointer;">
+        <div class="dish-row" onclick="openModal('Pechuga de Pollo', '8.50', 'A la plancha con guarnición.', 'img/pechuga-pollo.png')" style="cursor: pointer;">
           <div class="photo sm has-img"><img src="img/pechuga-pollo.png" alt="Pechuga pollo"></div>
           <div class="dish-row-info">
             <div class="dish-name">Pechuga de Pollo</div>
           </div>
         </div>
-        <div class="dish-card" onclick="openModal('Combo Parrillero', '28.00', 'Alitas y muslos de pollo con toque ahumado.', 'img/combo.png')" style="margin-top:6px; cursor: pointer;">
-          <div class="photo wide has-img"><img src="img/combo.png" alt="Combo parrillero"></div>
-          <span style="text-align:center;font-family:'Oswald',sans-serif;font-size:0.6rem;letter-spacing:3px;color:#e87a4a;border:1px solid rgba(232,122,74,0.3);padding:3px 12px;display:inline-block;align-self:center;">ESPECIAL</span>
-          <div class="dish-name">Combo Parrillero</div>
+        <div class="dish-card" onclick="openModal('Alitas y Mueslitos Fritos', '12.50', 'Alitas y muslos de pollo con toque ahumado.', 'img/combo.png')" style="margin-top:6px; cursor: pointer;">
+          <div class="photo wide has-img"><img src="img/combo.png" alt="Alitas"></div>
+          <span style="text-align:center;font-family:'Oswald',sans-serif;font-size:0.6rem;letter-spacing:3px;color:#e87a4a;border:1px solid rgba(232,122,74,0.3);padding:3px 12px;display:inline-block;align-self:center;">Elige el tamaño dentro</span>
+          <div class="dish-name">Alitas y Mueslitos Fritos</div>
         </div>
       </div>
     </section>
@@ -827,22 +831,20 @@
       <div class="section-line right"></div>
     </div>
     <div class="grid-4">
-      
-      <div class="dish-card" onclick="openModal('Paella Tradicional', '15.00', 'Elige entre especialidad de Marisco o Valenciana.', 'img/paella-marisco.png')" style="cursor: pointer;">
+      <div class="dish-card" onclick="openModal('Paella Tradicional', '10.00', 'Elige entre especialidad de Marisco o de Pollo.', 'img/paella-marisco.png')" style="cursor: pointer;">
         <div class="photo wide has-img"><img src="img/paella-marisco.png" alt="Paella tradicional"></div>
         <div class="dish-name">Paella Tradicional</div>
-        <div class="dish-desc">De Marisco o Valenciana</div>
+        <div class="dish-desc">De Marisco o Pollo</div>
       </div>
-
-      <div class="dish-card" onclick="openModal('Arroz Especial de la Casa', '17.00', 'Arroz salteado con maíz, huevo, atún, pepinillo, cebolla y mayonesa.', 'img/arros-especial.png')" style="cursor: pointer;">
+      <div class="dish-card" onclick="openModal('Arroz Especial de la Casa', '11.20', 'Arroz salteado con maíz, huevo, atún, pepinillo, cebolla y mayonesa.', 'img/arros-especial.png')" style="cursor: pointer;">
         <div class="photo wide has-img"><img src="img/arros-especial.png" alt="Arroz especial"></div>
         <div class="dish-name">Arroz Especial de la Casa</div>
       </div>
-      <div class="dish-card" onclick="openModal('Risotto con Crema de Calabacín', '12.00', 'Arroz con crema de calabacín, suave y cremoso, con tomate cherry.', 'img/risotto-calabacin.png')" style="cursor: pointer;">
+      <div class="dish-card" onclick="openModal('Risotto con Crema de Calabacín', '10.00', 'Suave y cremoso.', 'img/risotto-calabacin.png')" style="cursor: pointer;">
         <div class="photo wide has-img"><img src="img/risotto-calabacin.png" alt="Risotto calabacin"></div>
         <div class="dish-name">Risotto con Crema de Calabacín</div>
       </div>
-      <div class="dish-card" onclick="openModal('Risotto con Crema de Pimiento', '12.00', 'Arroz intenso y cremoso, con crema de pimiento.', 'img/risotto-pimiento.png')" style="cursor: pointer;">
+      <div class="dish-card" onclick="openModal('Risotto con Crema de Pimiento', '10.00', 'Intenso y cremoso.', 'img/risotto-pimiento.png')" style="cursor: pointer;">
         <div class="photo wide has-img"><img src="img/risotto-pimiento.png" alt="Risotto pimiento"></div>
         <div class="dish-name">Risotto con Crema de Pimiento</div>
       </div>
@@ -861,20 +863,20 @@
       <div class="section-line right"></div>
     </div>
     <div class="grid-3">
-      <div class="dish-card" onclick="openModal('Tacos Gourmet', '8.50', 'Carne picada, pollo marinado o mixto. O crea tu propio taco.', 'img/taco.png')" style="cursor: pointer;">
+      <div class="dish-card" onclick="openModal('Tacos Gourmet', '5.50', 'Carne asada, pollo marinado o mixto. O crea tu propio taco.', 'img/taco.png')" style="cursor: pointer;">
         <div class="photo wide has-img"><img src="img/taco.png" alt="Taco"></div>
         <div class="dish-name">Tacos Gourmet</div>
-        <div class="dish-desc">Carne, pollo o mixto</div>
+        <div class="dish-desc">Asada, pollo o mixto</div>
       </div>
-      <div class="dish-card" onclick="openModal('The Burger Grill', '10.00', 'Ternera p pollo crujiente, con verdura o sin verdura', 'img/hamburguesa.png')" style="cursor: pointer;">
+      <div class="dish-card" onclick="openModal('The Burger Grill', '9.00', 'Hamburguesa especial con toppings a tu gusto.', 'img/hamburguesa.png')" style="cursor: pointer;">
         <div class="photo wide has-img"><img src="img/hamburguesa.png" alt="Hamburguesa"></div>
         <div class="dish-name">The Burger Grill</div>
-        <div class="dish-desc">Ternera o pollo</div>
+        <div class="dish-desc">Pollo o Ternera</div>
       </div>
-      <div class="dish-card" onclick="openModal('Quesadillas', '8.50', 'Rellenas de queso fundido y opción de carne o pollo.', 'img/quesadilla.png')" style="cursor: pointer;">
+      <div class="dish-card" onclick="openModal('Quesadillas', '6.50', 'Rellenas de queso fundido y opción de carne o sin ella.', 'img/quesadilla.png')" style="cursor: pointer;">
         <div class="photo wide has-img"><img src="img/quesadilla.png" alt="Quesadilla"></div>
         <div class="dish-name">Quesadillas</div>
-        <div class="dish-desc">Carne o pollo a elegir</div>
+        <div class="dish-desc">Sin carne o Con carne</div>
       </div>
     </div>
   </section>
@@ -892,28 +894,34 @@
         <div class="section-line right"></div>
       </div>
       <div style="display:flex;flex-direction:column;gap:16px;">
-        <div class="dish-row" onclick="openModal('Insalata Russa', '6.50', 'Patata, atún y hortalizas en mayonesa suave.', 'img/rusa.jpeg')" style="cursor: pointer;">
+        <div class="dish-row" onclick="openModal('Insalata Russa', '8.00', 'Patata, atún y hortalizas en crema suave.', 'img/rusa.jpeg')" style="cursor: pointer;">
           <div class="photo sm has-img"><img src="img/rusa.jpeg" alt="Ensaladilla rusa"></div>
           <div class="dish-row-info">
             <div class="dish-name">Insalata Russa</div>
           </div>
         </div>
-        <div class="dish-row" onclick="openModal('Ensalada de la Huerta', '7.50', 'Lechugas, tomate, cebolla tierna y pepino.', 'img/de-la-huerta.png')" style="cursor: pointer;">
+        <div class="dish-row" onclick="openModal('Ensalada de la Huerta', '6.40', 'Lechugas, tomate, cebolla tierna y pepino.', 'img/de-la-huerta.png')" style="cursor: pointer;">
           <div class="photo sm has-img"><img src="img/de-la-huerta.png" alt="Ensalada huerta"></div>
           <div class="dish-row-info">
             <div class="dish-name">Ensalada de la Huerta</div>
           </div>
         </div>
-        <div class="dish-row" onclick="openModal('Ensalada Mediterránea', '9.00', 'Base verde con atún, huevo cocido y olivas.', 'img/mediterranea.png')" style="cursor: pointer;">
+        <div class="dish-row" onclick="openModal('Ensalada Mediterránea', '8.50', 'Base verde con atún, huevo cocido y olivas.', 'img/mediterranea.png')" style="cursor: pointer;">
           <div class="photo sm has-img"><img src="img/mediterranea.png" alt="Ensalada mediterranea"></div>
           <div class="dish-row-info">
             <div class="dish-name">Ensalada Mediterránea</div>
           </div>
         </div>
-        <div class="dish-row" onclick="openModal('Ensalada César', '9.50', 'Lechuga, pollo, queso, picatostes y salsa César.', 'img/ensalada-cesar.png')" style="cursor: pointer;">
+        <div class="dish-row" onclick="openModal('Ensalada César', '8.50', 'Lechuga, pollo, queso, picatostes y salsa César.', 'img/ensalada-césar.png')" style="cursor: pointer;">
           <div class="photo sm has-img"><img src="img/ensalada-césar.png" alt="Ensalada cesar"></div>
           <div class="dish-row-info">
             <div class="dish-name">Ensalada César</div>
+          </div>
+        </div>
+        <div class="dish-row" onclick="openModal('Verduras al Vapor', '6.50', 'Saludable mix de verduras preparadas al vapor.', 'img/verduras-al-vapor.png')" style="cursor: pointer;">
+          <div class="photo sm has-img"><img src="img/verduras-al-vapor.png" alt="Verduras vapor"></div>
+          <div class="dish-row-info">
+            <div class="dish-name">Verduras al Vapor</div>
           </div>
         </div>
       </div>
@@ -929,7 +937,7 @@
         <div class="section-line right"></div>
       </div>
       <div class="grid-3" style="grid-template-columns:repeat(3,1fr);">
-        <div class="postre-card" onclick="openModal('Tiramisú de la Casa', '5.50', 'Tiramisú clásico, bañado en café.', 'img/tiramisú.png')" style="cursor: pointer;">
+        <div class="postre-card" onclick="openModal('Tiramisú de la Casa', '5.50', 'Clásico o de fresa.', 'img/tiramisu.png')" style="cursor: pointer;">
           <div class="photo has-img" style="width:100%;aspect-ratio:1;"><img src="img/tiramisú.png" alt="Tiramisú"></div>
           <div class="dish-name" style="font-size:0.72rem;">Tiramisú</div>
         </div>
@@ -937,23 +945,23 @@
           <div class="photo has-img" style="width:100%;aspect-ratio:1;"><img src="img/cheesecake.png" alt="Cheesecake"></div>
           <div class="dish-name" style="font-size:0.72rem;">Cheesecake</div>
         </div>
-        <div class="postre-card" onclick="openModal('Budino', '4.50', 'Postre italiano cremoso tipo flan.', 'img/budino.jpg')" style="cursor: pointer;">
+        <div class="postre-card" onclick="openModal('Budino', '4.00', 'Postre italiano cremoso tipo flan.', 'img/budino.jpg')" style="cursor: pointer;">
           <div class="photo has-img" style="width:100%;aspect-ratio:1;"><img src="img/budino.jpg" alt="Budino"></div>
           <div class="dish-name" style="font-size:0.72rem;">Budino</div>
         </div>
-        <div class="postre-card" onclick="openModal('Tarta de Chocolate', '5.00', 'Tarta con sabor a cacao. Intensa y jugosa.', 'img/tarta-chocolate.png')" style="cursor: pointer;">
+        <div class="postre-card" onclick="openModal('Tarta de Chocolate', '5.00', 'Intensa y jugosa.', 'img/tarta-chocolate.png')" style="cursor: pointer;">
           <div class="photo has-img" style="width:100%;aspect-ratio:1;"><img src="img/tarta-chocolate.png" alt="Tarta"></div>
           <div class="dish-name" style="font-size:0.72rem;">Tarta de Chocolate</div>
         </div>
-        <div class="postre-card" onclick="openModal('Helados Artesanos', '4.00', 'Vainilla, chocolate, fresa o sorbete de limón.', 'img/gelato.png')" style="cursor: pointer;">
+        <div class="postre-card" onclick="openModal('Helados Artesanos', '5.40', 'Vainilla, chocolate, fresa o sorbete de limón.', 'img/gelato.png')" style="cursor: pointer;">
           <div class="photo has-img" style="width:100%;aspect-ratio:1;"><img src="img/gelato.png" alt="Helado"></div>
           <div class="dish-name" style="font-size:0.72rem;">Helados Artesanos</div>
         </div>
-        <div class="postre-card" onclick="openModal('Frutas de la época', '4.00', 'Selección fresca de frutas de temporada', 'img/frutas.png')" style="cursor: pointer;">
+        <div class="postre-card" onclick="openModal('Frutas de la época', '6.50', 'Selección fresca de frutas de temporada', 'img/frutas.png')" style="cursor: pointer;">
           <div class="photo has-img" style="width:100%;aspect-ratio:1;"><img src="img/frutas.png" alt="Fruta"></div>
           <div class="dish-name" style="font-size:0.72rem;">Frutas de la época</div>
         </div>
-        <div class="postre-card" onclick="openModal('Yogur con Topping', '3.50', 'Yogur natural cremoso con topping a elegir', 'img/yogur.png')" style="cursor: pointer;">
+        <div class="postre-card" onclick="openModal('Yogur con Topping', '5.00', 'Yogur natural cremoso con topping a elegir', 'img/yogur.png')" style="cursor: pointer;">
           <div class="photo has-img" style="width:100%;aspect-ratio:1;"><img src="img/yogur.png" alt="Yogur"></div>
           <div class="dish-name" style="font-size:0.72rem;">Yogur</div>
         </div>
@@ -973,11 +981,11 @@
       <div class="section-line right"></div>
     </div>
     <div class="grid-5">
-      <div class="bebida-item" onclick="openModal('Café Cortado', '1.40', 'Café espresso con un poco de leche.', 'img/cortado.png')" style="cursor: pointer;">
+      <div class="bebida-item" onclick="openModal('Café Cortado', '1.50', 'Café espresso con un poco de leche.', 'img/cortado.png')" style="cursor: pointer;">
         <div class="photo has-img" style="width:100%;height:110px;border-radius:50px;"><img src="img/cortado.png" alt="Cortado"></div>
         <div class="dish-name" style="font-size:0.72rem;">Café Cortado</div>
       </div>
-      <div class="bebida-item" onclick="openModal('Café con Leche', '1.60', 'Café espresso con leche vaporizada.', 'img/café-con-leche.png')" style="cursor: pointer;">
+      <div class="bebida-item" onclick="openModal('Café con Leche', '1.70', 'Café espresso con leche vaporizada.', 'img/café-con-leche.png')" style="cursor: pointer;">
         <div class="photo has-img" style="width:100%;height:110px;border-radius:50px;"><img src="img/café-con-leche.png" alt="Con Leche"></div>
         <div class="dish-name" style="font-size:0.72rem;">Café con Leche</div>
       </div>
@@ -987,25 +995,25 @@
       </div>
       <div class="bebida-item" onclick="openModal('Café Solo', '1.50', 'Café 100% arábica recién molido.', 'img/cafe.png')" style="cursor: pointer;">
         <div class="photo has-img" style="width:100%;height:110px;border-radius:50px;"><img src="img/cafe.png" alt="Cafe"></div>
-        <div class="dish-name" style="font-size:0.72rem;">Café</div>
+        <div class="dish-name" style="font-size:0.72rem;">Café Solo</div>
       </div>
       <div class="bebida-item" onclick="openModal('Café Corto', '1.30', 'Café espresso intenso.', 'img/corto.png')" style="cursor: pointer;">
         <div class="photo has-img" style="width:100%;height:110px;border-radius:50px;"><img src="img/corto.png" alt="Corto"></div>
         <div class="dish-name" style="font-size:0.72rem;">Café Corto</div>
       </div>
-      <div class="bebida-item" onclick="openModal('Cappuccino', '2.00', 'Café espresso, leche vaporizada y espuma de leche.', 'img/capuccino.png')" style="cursor: pointer;">
+      <div class="bebida-item" onclick="openModal('Cappuccino', '1.80', 'Café espresso, leche vaporizada y espuma de leche.', 'img/capuccino.png')" style="cursor: pointer;">
         <div class="photo has-img" style="width:100%;height:110px;border-radius:50px;"><img src="img/capuccino.png" alt="Cappuccino"></div>
         <div class="dish-name" style="font-size:0.72rem;">Cappuccino</div>
       </div>
-      <div class="bebida-item" onclick="openModal('Refresco', '2.50', 'Elige tu sabor de refresco favorito.', 'img/refresco.png')" style="cursor: pointer;">
+      <div class="bebida-item" onclick="openModal('Refrescos', '1.80', 'Elige tu sabor de refresco favorito.', 'img/refresco.png')" style="cursor: pointer;">
         <div class="photo has-img" style="width:100%;height:110px;border-radius:50px;"><img src="img/refresco.png" alt="Refresco"></div>
-        <div class="dish-name" style="font-size:0.72rem;">Refresco</div>
+        <div class="dish-name" style="font-size:0.72rem;">Refrescos</div>
       </div>
-      <div class="bebida-item" onclick="openModal('Zumo Natural', '3.00', 'Zumo de naranja recién exprimida.', 'img/zumo-natural.png')" style="cursor: pointer;">
+      <div class="bebida-item" onclick="openModal('Zumo natural', '1.80', 'Zumo exprimido.', 'img/zumo-natural.png')" style="cursor: pointer;">
         <div class="photo has-img" style="width:100%;height:110px;border-radius:50px;"><img src="img/zumo-natural.png" alt="Zumo"></div>
         <div class="dish-name" style="font-size:0.72rem;">Zumo Natural</div>
       </div>
-      <div class="bebida-item" onclick="openModal('Agua', '1.50', 'Botella de agua mineral fría.', 'img/agua.jpg')" style="cursor: pointer;">
+      <div class="bebida-item" onclick="openModal('Agua', '1.20', 'Botella de agua mineral fría.', 'img/agua.jpg')" style="cursor: pointer;">
         <div class="photo has-img" style="width:100%;height:110px;border-radius:50px;"><img src="img/agua.jpg" alt="Agua"></div>
         <div class="dish-name" style="font-size:0.72rem;">Agua</div>
       </div>
@@ -1024,24 +1032,24 @@
       <div class="section-line right"></div>
     </div>
     <div class="grid-4">
-      <div class="combo-card" onclick="openModal('Combo Pizza & Bebida', '12.50', '1 Pizza a elegir + refresco + patatas + café.', 'img/menu-pizza.png')" style="cursor: pointer;">
+      <div class="combo-card" onclick="openModal('Combo Pizza & Bebida', '0.00', '1 Pizza a elegir + refresco + patatas + café gratis.', 'img/menu-pizza.png')" style="cursor: pointer;">
         <div class="photo wide has-img"><img src="img/menu-pizza.png" alt="Combo"></div>
-        <span class="combo-tag">Combo Pizza</span>
+        <span class="combo-tag">+3.50€ EXTRA</span>
         <div class="dish-name" style="text-align:center;">Pizza + Bebida + Patatas + Café</div>
       </div>
-      <div class="combo-card" onclick="openModal('Burger Meal', '11.50', 'Burger + patatas + bebida + café.', 'img/manu-hamburguesa.png')" style="cursor: pointer;">
+      <div class="combo-card" onclick="openModal('Burger Meal', '0.00', 'Burger + patatas + bebida + café gratis.', 'img/manu-hamburguesa.png')" style="cursor: pointer;">
         <div class="photo wide has-img"><img src="img/manu-hamburguesa.png" alt="Combo"></div>
-        <span class="combo-tag">Burger Meal</span>
+        <span class="combo-tag">+3.50€ EXTRA</span>
         <div class="dish-name" style="text-align:center;">Burger + Patatas + Bebida + Café</div>
       </div>
-      <div class="combo-card" onclick="openModal('Taco Party', '10.00', 'Taco + patatas + bebida + café.', 'img/menu-taco.png')" style="cursor: pointer;">
+      <div class="combo-card" onclick="openModal('Taco Party', '0.00', 'Taco + patatas + bebida + café gratis.', 'img/menu-taco.png')" style="cursor: pointer;">
         <div class="photo wide has-img"><img src="img/menu-taco.png" alt="Combo"></div>
-        <span class="combo-tag">Taco Party</span>
+        <span class="combo-tag">+3.50€ EXTRA</span>
         <div class="dish-name" style="text-align:center;">Taco + Patatas + Bebida + Café</div>
       </div>
-      <div class="combo-card" onclick="openModal('Menú de la Plancha', '14.00', 'Carne o pescado + patatas + ensalada + bebida + café.', 'img/menu-plancha.png')" style="cursor: pointer;">
+      <div class="combo-card" onclick="openModal('Menú de la Plancha', '0.00', 'Carne o pescado + patatas + ensalada + bebida + café gratis.', 'img/combo.png')" style="cursor: pointer;">
         <div class="photo wide has-img"><img src="img/menu-plancha.png" alt="Combo"></div>
-        <span class="combo-tag">Menú Plancha</span>
+        <span class="combo-tag">+3.50€ EXTRA</span>
         <div class="dish-name" style="text-align:center;">Plato + Patatas + Ensalada + Bebida + Café</div>
       </div>
     </div>
@@ -1182,7 +1190,7 @@
         <label style="display:block; color:rgba(245,234,216,0.6); font-size:0.8rem; text-transform:uppercase; margin-bottom:5px; margin-top:10px;">Tipo de patatas:</label>
         <select id="tipoPatatas" class="checkout-name-input" style="margin-bottom:10px;" onchange="updateDynamicPrice()">
             <option value="Fritas">Patatas Fritas</option>
-            <option value="Bravas">Patatas Bravas</option>
+            <option value="Bravas">Patatas Bravas (Picante)</option>
         </select>
         <label style="display:block; color:rgba(245,234,216,0.6); font-size:0.8rem; text-transform:uppercase; margin-bottom:5px;">Tamaño patatas:</label>
         <select id="tamanoPatatas" class="checkout-name-input" style="margin-bottom:10px;" onchange="updateDynamicPrice()">
@@ -1193,39 +1201,107 @@
 
     const bebidaSelect = `
         <label style="display:block; color:rgba(245,234,216,0.6); font-size:0.8rem; text-transform:uppercase; margin-bottom:5px; margin-top:10px;">Bebida:</label>
-        <select id="tipoBebida" class="checkout-name-input" style="margin-bottom:0;">
+        <select id="tipoBebida" class="checkout-name-input" style="margin-bottom:0;" onchange="updateDynamicPrice()">
             <option value="Coca-Cola">Coca-Cola</option>
             <option value="Fanta Naranja">Fanta Naranja</option>
             <option value="Fanta Limón">Fanta Limón</option>
             <option value="Sprite">Sprite</option>
+            <option value="Agua">Aquarius</option>
+            <option value="Agua">Lipton</option>
+            <option value="Agua">Monster</option>
+            <option value="Agua">Schweppes</option>
+            <option value="Agua">Batido chocolate</option>
+            <option value="Agua">Agua</option>
         </select>
     `;
     
     if (nombre === 'Dúo de Patatas') {
         html = `<div class="modal-extra-controls">${patatasSelect}</div>`;
+    } else if (nombre === 'Pizza de Kebab') {
+        html = `
+            <div class="modal-extra-controls">
+                <label style="display:block; color:rgba(245,234,216,0.6); font-size:0.8rem; text-transform:uppercase; margin-bottom:5px;">Tipo de Carne:</label>
+                <select id="tipoKebab" class="checkout-name-input" style="margin-bottom:0;" onchange="updateDynamicPrice()">
+                    <option value="Pollo">Pollo (12.00€)</option>
+                    <option value="Ternera">Ternera (14.50€)</option>
+                </select>
+            </div>
+        `;
     } else if (nombre === 'Paella Tradicional') {
         html = `
             <div class="modal-extra-controls">
                 <label style="display:block; color:rgba(245,234,216,0.6); font-size:0.8rem; text-transform:uppercase; margin-bottom:5px;">Especialidad:</label>
-                <select id="tipoPaella" class="checkout-name-input" style="margin-bottom:0;" onchange="updatePaellaPhoto()">
-                    <option value="Marinera (Marisco)">Marinera (Marisco)</option>
-                    <option value="Valenciana (Pollo y Conejo)">Valenciana (Pollo y Conejo)</option>
+                <select id="tipoPaella" class="checkout-name-input" style="margin-bottom:0;" onchange="updateDynamicPrice()">
+                    <option value="Marisco">Marisco</option>
+                    <option value="Pollo">Pollo</option>
                 </select>
             </div>
         `;
-    } else if (nombre === 'Refresco') {
+    } else if (['Mixto del mar', 'Chuletillas de Cordero', 'Fritura de Pescado', 'Alitas y Mueslitos Fritos'].includes(nombre)) {
+        html = `
+            <div class="modal-extra-controls">
+                <label style="display:block; color:rgba(245,234,216,0.6); font-size:0.8rem; text-transform:uppercase; margin-bottom:5px;">Tamaño del plato:</label>
+                <select id="tamanoPlato" class="checkout-name-input" style="margin-bottom:0;" onchange="updateDynamicPrice()">
+                    <option value="Individual">Individual</option>
+                    <option value="Familiar">Familiar</option>
+                </select>
+            </div>
+        `;
+    } else if (nombre === 'Tacos Gourmet') {
+        html = `
+            <div class="modal-extra-controls">
+                <label style="display:block; color:rgba(245,234,216,0.6); font-size:0.8rem; text-transform:uppercase; margin-bottom:5px;">Relleno:</label>
+                <select id="tipoTaco" class="checkout-name-input" style="margin-bottom:0;" onchange="updateDynamicPrice()">
+                    <option value="Pollo">Pollo (5.50€)</option>
+                    <option value="Ternera">Ternera (6.00€)</option>
+                    <option value="Mixto">Mixto (6.50€)</option>
+                </select>
+            </div>
+        `;
+    } else if (nombre === 'The Burger Grill') {
+        html = `
+            <div class="modal-extra-controls">
+                <label style="display:block; color:rgba(245,234,216,0.6); font-size:0.8rem; text-transform:uppercase; margin-bottom:5px;">Tipo:</label>
+                <select id="tipoBurger" class="checkout-name-input" style="margin-bottom:0;" onchange="updateDynamicPrice()">
+                    <option value="Pollo">Pollo</option>
+                    <option value="Ternera">Ternera</option>
+                </select>
+            </div>
+        `;
+    } else if (nombre === 'Quesadillas') {
+        html = `
+            <div class="modal-extra-controls">
+                <label style="display:block; color:rgba(245,234,216,0.6); font-size:0.8rem; text-transform:uppercase; margin-bottom:5px;">Opción:</label>
+                <select id="tipoQuesadilla" class="checkout-name-input" style="margin-bottom:0;" onchange="updateDynamicPrice()">
+                    <option value="Sin carne">Sin carne (6.50€)</option>
+                    <option value="Con carne">Con carne (8.50€)</option>
+                </select>
+            </div>
+        `;
+    } else if (nombre === 'Agua') {
+        html = `
+            <div class="modal-extra-controls">
+                <label style="display:block; color:rgba(245,234,216,0.6); font-size:0.8rem; text-transform:uppercase; margin-bottom:5px;">Tamaño:</label>
+                <select id="tipoAgua" class="checkout-name-input" style="margin-bottom:0;" onchange="updateDynamicPrice()">
+                    <option value="50cl">50cl (1.20€)</option>
+                    <option value="1.5L">1.5L (1.70€)</option>
+                </select>
+            </div>
+        `;
+    } else if (nombre === 'Refrescos') {
         html = `<div class="modal-extra-controls">${bebidaSelect}</div>`;
     } else if (nombre === 'Combo Pizza & Bebida') {
         html = `<div class="modal-extra-controls">
             <label style="display:block; color:rgba(245,234,216,0.6); font-size:0.8rem; text-transform:uppercase; margin-bottom:5px;">Elige tu Pizza:</label>
-            <select id="opcionPrincipal" class="checkout-name-input" style="margin-bottom:0;">
-                <option value="Margarita">Margarita</option>
+            <select id="opcionPrincipal" class="checkout-name-input" style="margin-bottom:0;" onchange="updateDynamicPrice()">
+                <option value="Margarita Clásica">Margarita Clásica</option>
+                <option value="Margarita con Búfala">Margarita con Búfala</option>
                 <option value="Frutti di Mare">Frutti di Mare</option>
                 <option value="Quattro Formaggi">Quattro Formaggi</option>
-                <option value="Boloñesa">Boloñesa</option>
+                <option value="Pizza Boloñesa">Pizza Boloñesa</option>
                 <option value="Ortolana">Ortolana</option>
                 <option value="Tonno e Olive">Tonno e Olive</option>
-                <option value="Pollo">Pollo</option>
+                <option value="Pizza de Pollo">Pizza de Pollo</option>
             </select>
             ${patatasSelect}
             ${bebidaSelect}
@@ -1233,8 +1309,8 @@
     } else if (nombre === 'Burger Meal') {
         html = `<div class="modal-extra-controls">
             <label style="display:block; color:rgba(245,234,216,0.6); font-size:0.8rem; text-transform:uppercase; margin-bottom:5px;">Elige tu Burger:</label>
-            <select id="opcionPrincipal" class="checkout-name-input" style="margin-bottom:0;">
-                <option value="Pollo Crujiente">Pollo Crujiente</option>
+            <select id="opcionPrincipal" class="checkout-name-input" style="margin-bottom:0;" onchange="updateDynamicPrice()">
+                <option value="Pollo">Pollo</option>
                 <option value="Ternera">Ternera</option>
             </select>
             ${patatasSelect}
@@ -1243,9 +1319,9 @@
     } else if (nombre === 'Taco Party') {
         html = `<div class="modal-extra-controls">
             <label style="display:block; color:rgba(245,234,216,0.6); font-size:0.8rem; text-transform:uppercase; margin-bottom:5px;">Elige tu Taco:</label>
-            <select id="opcionPrincipal" class="checkout-name-input" style="margin-bottom:0;">
+            <select id="opcionPrincipal" class="checkout-name-input" style="margin-bottom:0;" onchange="updateDynamicPrice()">
                 <option value="Pollo">Pollo</option>
-                <option value="Carne Picada">Carne Picada</option>
+                <option value="Ternera">Ternera</option>
                 <option value="Mixto">Mixto</option>
             </select>
             ${patatasSelect}
@@ -1254,14 +1330,14 @@
     } else if (nombre === 'Menú de la Plancha') {
         html = `<div class="modal-extra-controls">
             <label style="display:block; color:rgba(245,234,216,0.6); font-size:0.8rem; text-transform:uppercase; margin-bottom:5px;">Elige tu Plato:</label>
-            <select id="opcionPrincipal" class="checkout-name-input" style="margin-bottom:0;">
-                <option value="Pinchos Morunos">Pinchos Morunos</option>
-                <option value="Entrecot">Entrecot</option>
+            <select id="opcionPrincipal" class="checkout-name-input" style="margin-bottom:0;" onchange="updateDynamicPrice()">
+                <option value="Brochetas de Pavo">Brochetas de Pavo</option>
+                <option value="Entrecot de Ternera">Entrecot de Ternera</option>
                 <option value="Chuletillas de Cordero">Chuletillas de Cordero</option>
                 <option value="Pinchos de Ternera">Pinchos de Ternera</option>
                 <option value="Pechuga de Pollo">Pechuga de Pollo</option>
-                <option value="Salmón a la plancha">Salmón a la plancha</option>
-                <option value="Sepia a la plancha">Sepia a la plancha</option>
+                <option value="Salmón a la Plancha">Salmón a la Plancha</option>
+                <option value="Sepia a la Plancha">Sepia a la Plancha</option>
             </select>
             ${patatasSelect}
             ${bebidaSelect}
@@ -1279,33 +1355,76 @@
   // Funciones dinamicas universales (Cambia foto y actualiza precio)
   function updateDynamicPrice() {
       let p = precioActual;
-      let tamano = document.getElementById('tamanoPatatas');
-      if (tamano && tamano.value === 'Grandes') {
-          p += 1.50;
+
+      // 1. Tamaños de Patatas (aplica al Duo y a Combos)
+      let tamanoPatatas = document.getElementById('tamanoPatatas');
+      if (tamanoPatatas && tamanoPatatas.value === 'Grandes') p += 1.50;
+
+      // 2. Selectores de precio por plato
+      if (platoActual === 'Pizza de Kebab') {
+          p = document.getElementById('tipoKebab').value === 'Ternera' ? 14.50 : 12.00;
       }
+      else if (platoActual === 'Paella Tradicional') {
+          p = document.getElementById('tipoPaella').value === 'Marisco' ? 10.00 : 8.50;
+      }
+      else if (platoActual === 'Mixto del mar') {
+          p = document.getElementById('tamanoPlato').value === 'Familiar' ? 37.00 : 19.70;
+      }
+      else if (platoActual === 'Chuletillas de Cordero') {
+          p = document.getElementById('tamanoPlato').value === 'Familiar' ? 39.00 : 20.00;
+      }
+      else if (platoActual === 'Fritura de Pescado') {
+          p = document.getElementById('tamanoPlato').value === 'Familiar' ? 31.50 : 16.00;
+      }
+      else if (platoActual === 'Alitas y Mueslitos Fritos') {
+          p = document.getElementById('tamanoPlato').value === 'Familiar' ? 23.50 : 12.50;
+      }
+      else if (platoActual === 'Tacos Gourmet') {
+          let t = document.getElementById('tipoTaco').value;
+          p = (t === 'Pollo') ? 5.50 : (t === 'Ternera' ? 6.00 : 6.50);
+      }
+      else if (platoActual === 'Quesadillas') {
+          p = document.getElementById('tipoQuesadilla').value === 'Con carne' ? 8.50 : 6.50;
+      }
+      else if (platoActual === 'Agua') {
+          p = document.getElementById('tipoAgua').value === '1.5L' ? 1.70 : 1.20;
+      }
+      // 3. COMBOS (Buscan el precio del plato principal y le suman 3.50 + posible extra de patatas)
+      else if (platoActual.includes('Combo') || platoActual.includes('Meal') || platoActual.includes('Party') || platoActual.includes('Menú')) {
+          let principal = document.getElementById('opcionPrincipal').value;
+          let baseCombo = 0;
+          
+          if (platoActual === 'Combo Pizza & Bebida') {
+              const preciosPizza = { 'Margarita Clásica':8.50, 'Margarita con Búfala':12.50, 'Frutti di Mare':14.00, 'Quattro Formaggi':12.00, 'Pizza Boloñesa':12.00, 'Ortolana':11.00, 'Tonno e Olive':11.50, 'Pizza de Pollo':12.00 };
+              baseCombo = preciosPizza[principal] || 8.50;
+          } else if (platoActual === 'Burger Meal') {
+              baseCombo = 9.00; // Todas las burgers son 9.00
+          } else if (platoActual === 'Taco Party') {
+              baseCombo = (principal === 'Pollo') ? 5.50 : (principal === 'Ternera' ? 6.00 : 6.50);
+          } else if (platoActual === 'Menú de la Plancha') {
+              const preciosPlancha = { 'Brochetas de Pavo':8.50, 'Entrecot de Ternera':17.00, 'Chuletillas de Cordero':20.00, 'Pinchos de Ternera':13.50, 'Pechuga de Pollo':8.50, 'Salmón a la Plancha':13.00, 'Sepia a la Plancha':15.00 };
+              baseCombo = preciosPlancha[principal] || 8.50;
+          }
+          
+          p = baseCombo + 3.50; // Suma precio del menú/combo
+          if (tamanoPatatas && tamanoPatatas.value === 'Grandes') p += 1.50;
+      }
+
       document.getElementById('modalPrice').innerText = p.toFixed(2) + '€';
 
-      // Cambiamos la foto solo si estamos en el plato especifico
+      // Cambiamos la foto solo si estamos en platos que requieren cambio visual
+      let imgEl = document.getElementById('modalImg');
       if (platoActual === 'Dúo de Patatas') {
           let tipo = document.getElementById('tipoPatatas').value;
-          let imgEl = document.getElementById('modalImg');
-          if (tipo === 'Bravas') {
-              imgEl.src = 'img/patatas-bravas.png';
-          } else {
-              imgEl.src = 'img/patatas-fritas.png';
-          }
+          if (tipo === 'Bravas') imgEl.src = 'img/patatas-bravas.png';
+          else imgEl.src = 'img/patatas-fritas.png';
+      } else if (platoActual === 'Paella Tradicional') {
+          let tipoP = document.getElementById('tipoPaella').value;
+          if (tipoP === 'Marisco') imgEl.src = 'img/paella-marisco.png';
+          else imgEl.src = 'img/paella-tradicional.png';
       }
   }
 
-  function updatePaellaPhoto() {
-      let tipo = document.getElementById('tipoPaella').value;
-      let imgEl = document.getElementById('modalImg');
-      if (tipo === 'Marinera (Marisco)') {
-          imgEl.src = 'img/paella-marisco.png';
-      } else {
-          imgEl.src = 'img/paella-tradicional.png';
-      }
-  }
 
   function closeModal() {
     document.getElementById('itemModal').classList.remove('active');
@@ -1324,23 +1443,29 @@
   function addToCart() {
     let notasCliente = document.getElementById('modalNotes') ? document.getElementById('modalNotes').value.trim() : '';
     let nombreFinal = platoActual;
-    let precioFinal = precioActual;
+    
+    // Pillamos el precio directamente de la interfaz, que ya lo hemos calculado y validado
+    let precioFinal = parseFloat(document.getElementById('modalPrice').innerText);
 
-    let tamano = document.getElementById('tamanoPatatas');
-    if (tamano && tamano.value === 'Grandes') {
-        precioFinal += 1.50;
-    }
-
+    // Ajustamos el nombre para que te llegue al WhatsApp perfecto
     if (platoActual === 'Dúo de Patatas') {
-        let tipo = document.getElementById('tipoPatatas').value;
-        let tam = tamano.value;
-        nombreFinal = `Dúo de Patatas (${tipo} - ${tam})`;
+        nombreFinal = `Dúo de Patatas (${document.getElementById('tipoPatatas').value} - ${document.getElementById('tamanoPatatas').value})`;
+    } else if (platoActual === 'Pizza de Kebab') {
+        nombreFinal = `Pizza de Kebab (${document.getElementById('tipoKebab').value})`;
+    } else if (['Mixto del mar', 'Chuletillas de Cordero', 'Fritura de Pescado', 'Alitas y Mueslitos Fritos'].includes(platoActual)) {
+        nombreFinal = `${platoActual} (${document.getElementById('tamanoPlato').value})`;
     } else if (platoActual === 'Paella Tradicional') {
-        let tipo = document.getElementById('tipoPaella').value;
-        nombreFinal = `Paella Tradicional (${tipo})`;
-    } else if (platoActual === 'Refresco') {
-        let bebida = document.getElementById('tipoBebida').value;
-        nombreFinal = `Refresco (${bebida})`;
+        nombreFinal = `Paella Tradicional (${document.getElementById('tipoPaella').value})`;
+    } else if (platoActual === 'Tacos Gourmet') {
+        nombreFinal = `Tacos Gourmet (${document.getElementById('tipoTaco').value})`;
+    } else if (platoActual === 'The Burger Grill') {
+        nombreFinal = `The Burger Grill (${document.getElementById('tipoBurger').value})`;
+    } else if (platoActual === 'Quesadillas') {
+        nombreFinal = `Quesadillas (${document.getElementById('tipoQuesadilla').value})`;
+    } else if (platoActual === 'Agua') {
+        nombreFinal = `Agua (${document.getElementById('tipoAgua').value})`;
+    } else if (platoActual === 'Refrescos') {
+        nombreFinal = `Refresco (${document.getElementById('tipoBebida').value})`;
     } else if (platoActual.includes('Combo') || platoActual.includes('Meal') || platoActual.includes('Party') || platoActual.includes('Menú')) {
         let principal = document.getElementById('opcionPrincipal').value;
         let tipoPat = document.getElementById('tipoPatatas').value;
